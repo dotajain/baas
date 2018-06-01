@@ -1,0 +1,34 @@
+.title {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  font-family: $font-medium;
+  color: $gray;
+  letter-spacing: 0.04em;
+  .section-copy & {
+    color: $blue;
+  }
+}
+
+.section-copy {
+  p {
+    line-height: 1.6;
+    font-family: $font-light;
+    font-size: 1.2em;
+    letter-spacing: 0.04em;
+    margin-bottom: 15px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.page-title {
+  font-size: 2em;
+  font-family: $font-bold;
+  margin-bottom: 20px;
+}
+.page-title-sub {
+  font-size: 1.4em;
+  font-family: $font-light-italic;
+  margin-bottom: 20px;
+}

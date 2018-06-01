@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "es2015",
+    "experimentalDecorators": true,
+    "javascript.validate.enable": false
+  },
+  "exclude": ["node_modules"]
+}

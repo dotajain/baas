@@ -1,0 +1,62 @@
+.hero{
+  padding: 1em 0;
+  .logo {
+    width: 370px;
+    position: relative;
+    margin-bottom: 1em;
+    svg {
+      path{
+        fill: $white;
+      }
+    }
+    .logo-arrow{
+      background-color: $white;
+      i{
+        top: -18px;
+      }
+    }
+  }
+  &-blue {
+    background-color: #6ebaf7;
+    color: $white;
+  }
+  &-white {
+    border-bottom: 1px solid #d8d8d8;
+    background: #fafafa;
+  }
+  p{
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .page-title {
+    margin-top: 2rem;
+  }
+  &-list {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0 0 40px;
+    li {
+      line-height: 1.4;
+      margin-bottom: 20px;
+      letter-spacing: 0.04rem;
+      position: relative;
+      padding-left: 10px;
+      &:before {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 5px;
+        position: absolute;
+        left: 0;
+        top: 8px;
+        background-color: #a2a2a2;
+        border-radius: 50%;
+      }
+    }
+  }
+}

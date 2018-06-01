@@ -1,0 +1,82 @@
+.navbar {
+  &-primary{
+   background: $blue-light;
+  }
+  &-default{
+    background-color: $white;
+  }
+}
+.navbar-brand{
+  margin: 0 1em 0 0;
+  padding: 0;
+  position: relative;
+}
+.logo {
+  font-family: $font-medium;
+  font-size: 34px;
+  &-icon{
+    display: block;
+    position: absolute;
+    svg {
+      height: 1.4em;
+      width: 1.4em;
+      vertical-align: top;
+      path {
+        fill: $blue;
+      }
+    }
+  }
+ &-name{
+      position: relative;
+ }
+  &-title {
+    font-family: $font-bold;
+    letter-spacing: 0.06em;
+  }
+  .logo-default &{
+    &-icon{
+      top: -5px;
+      right: -9px;
+    }
+    &-name{
+      span{
+        display: block;
+      }
+    }
+    &-full{
+      font-size: .35em;
+      text-transform: uppercase;
+    }
+    &-slog {
+      font-size: .42em;
+      letter-spacing: 0.05em;
+    }
+    &-arrow{
+      height: 3px;
+      width: 103%;
+      background: $blue;
+      margin: 3px 0;
+      position: relative;
+      i{
+        position: absolute;    
+        right: -5px;
+        top: -17px;
+        font-size: 36px;
+      }
+    }
+  }
+  &.logo-default{
+    font-size: 60px;
+  }
+  &.logo-header{
+    padding-left: 53px;
+    overflow: hidden;
+    .logo-full, .logo-slog, .logo-arrow{
+      display: none;
+    }
+    .logo-icon {
+      left: 0;
+      top: -5px;
+    }
+  }
+}

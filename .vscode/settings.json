@@ -1,0 +1,8 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+     // Turns auto fix on save on or off.
+    "eslint.autoFixOnSave": true,
+    // Enable / disable JavaScript validation
+    "javascript.validate.enable": false,
+    "vsicons.presets.angular": false
+  }

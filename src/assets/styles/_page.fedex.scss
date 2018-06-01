@@ -1,0 +1,23 @@
+.fedex{ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  z-index: 999999;
+  background-color: $white;
+  table {
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 10px;
+    td {
+      border: 1px solid #dcdcdc;
+      padding: 4px;
+
+      &:nth-child(odd) {
+        background-color: #f3f3f3;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.nav-link{
+  color: lighten($black, 30%);
+  letter-spacing: 0.03em;
+  border: 0;
+  font-size: 14px;
+  &.selected, &:hover{
+    color: $black;
+    background-color: $white;
+  }
+  &.btn{
+    color: lighten($black, 30%);
+    letter-spacing: 0.03em;
+    border: 0;
+    font-size: 14px;
+    background: transparent;
+    border-radius: 0;
+    &.selected, &:hover, .open &{
+      color: $black;
+      background-color: $white;
+    }
+  }
+}
+
+.dropdown-menu{
+  width: auto;
+  min-width: 280px;
+  border-radius: 3px;
+  padding: 0;
+  border-color: $blue;
+  box-shadow: 1px 2px 5px rgba($black, 0.14);
+  .open &{
+    display: block;
+  }
+  li {
+    > a{
+      display: block;
+      padding: 0.5em 1em;
+      padding-right: .5rem;
+      padding-left: .5rem;
+      letter-spacing: 0.03em;
+      color: lighten($black, 30%);
+      white-space: nowrap;
+      font-size: 13px;
+    }
+    &:hover{
+      background-color: $blue;
+      >a, .selected {
+        color: $white;
+      } 
+    }
+  }
+}
