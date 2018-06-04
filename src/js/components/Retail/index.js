@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import { NavLink, Redirect } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
 // custom Component
 import SynBankLogo from './partial/SynBankLogo';
 import MyAccount from './MyAccount';
@@ -229,13 +229,12 @@ class Retail extends Component {
     var keywords = this.getKeywordsArr();
     return Object.assign({
       token: this.state.token, smart_formatting: true, // formats phone numbers, currency, etc. (server-side)
-      continuous: false,                  // False = automatically stop transcription the first time a pause is detected
+      continuous: true,                  // False = automatically stop transcription the first time a pause is detected
       inactivity_timeout: 5,              // Number of seconds to wait before closing input stream
       format: false, // adds capitals, periods, and a few other things (client-side)
       model: this.state.model,
       objectMode: true,
       interim_results: true,
-      continuous: true,
       word_alternatives_threshold: 0.01, // note: in normal usage, you'd probably set this a bit higher
       keywords: keywords,
       keywords_threshold: keywords.length
@@ -307,12 +306,11 @@ class Retail extends Component {
 
   fetchToken() {
     return fetch('https://speech-to-text-demo.mybluemix.net/api/token').then(res => {
-      if (res.status != 200) {
+      if (res.status !== 200) {
         throw new Error('Error retrieving auth token');
       }
       return res.text();
-    }).
-    then(token => this.setState({token})).catch(this.handleError);
+    }).then(token => this.setState({token})).catch(this.handleError);
   }
 
   getKeywords(model) {
@@ -384,13 +382,13 @@ class Retail extends Component {
           <div className="retail-header-nav">
              <nav className="navbar navbar-toggleable-md navbar-primary ">  
               <div className="navbar-main">
-                <ul className="navbar-nav justify-content-between">
-                  <li className="nav-item"><NavLink exact to="/my-account" className="nav-link" activeClassName="selected">My Account</NavLink></li>
-                  <li className="nav-item"><NavLink to="/my-account/1" className="nav-link" activeClassName="selected">Fund Transfer</NavLink></li>
-                  <li className="nav-item"><NavLink to="/my-account/2" className="nav-link" activeClassName="selected">Detail Statement</NavLink></li>
-                  <li className="nav-item"><NavLink to="/my-account/3" className="nav-link" activeClassName="selected">Bill Payment</NavLink></li>
-                  <li className="nav-item"><NavLink to="/my-account/4" className="nav-link" activeClassName="selected">Offers</NavLink></li>
-                  <li className="nav-item"><NavLink to="/retail-digital-banking" className="nav-link" activeClassName="selected">Logout</NavLink></li>
+                <ul className="navbar-nav justify-content-between flex-row">
+                  <li className="nav-item"><NavLink exact to="/my-account" className="nav-link px-2" activeClassName="selected">My Account</NavLink></li>
+                  <li className="nav-item"><NavLink to="/my-account/1" className="nav-link px-2" activeClassName="selected">Fund Transfer</NavLink></li>
+                  <li className="nav-item"><NavLink to="/my-account/2" className="nav-link px-2" activeClassName="selected">Detail Statement</NavLink></li>
+                  <li className="nav-item"><NavLink to="/my-account/3" className="nav-link px-2" activeClassName="selected">Bill Payment</NavLink></li>
+                  <li className="nav-item"><NavLink to="/my-account/4" className="nav-link px-2" activeClassName="selected">Offers</NavLink></li>
+                  <li className="nav-item"><NavLink to="/retail-digital-banking" className="nav-link px-2" activeClassName="selected">Logout</NavLink></li>
                 </ul>
               </div>
             </nav>

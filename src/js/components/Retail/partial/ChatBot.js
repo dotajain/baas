@@ -2,7 +2,7 @@ import React from 'react';
 import ChatBotCard from './ChatBotCard';
 
 // speech to text
-import {Transcript} from './transcript';
+// import {Transcript} from './transcript';
 
 const ChatBot = ({...props}) => {
   

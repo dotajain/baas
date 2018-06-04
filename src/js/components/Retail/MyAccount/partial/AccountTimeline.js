@@ -1,5 +1,5 @@
 import React from 'react';
-
+import _ from 'lodash';
 
 const AccountTimeline = ({...props}) => {
   const transactionList = _.map(props.data.transaction, (transaction, i) => {

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import advisorThumb from '../../../../assets/images/advisor_image.gif';
+// import advisorThumb from '../../../../assets/images/advisor_image.gif';
 
 
 const ChatBotCard = ({...props}) => (

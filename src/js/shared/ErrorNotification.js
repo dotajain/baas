@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Alert } from 'react-bootstrap';
+import { Alert } from 'react-bootstrap';
 import { dismissError } from "../redux/actions/sendEmailActions";
 const ErrorNotification = ({data, dispatch}) => { 
   const handleDismiss = () => {

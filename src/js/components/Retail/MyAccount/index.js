@@ -43,7 +43,7 @@ class MyAccount extends Component {
   render() {
     const { accounts } = this.props;
     let cards = _.map(accounts, (account,i) => {
-     let active;
+    //  let active;
       return (
         <div className="col-sm-4" key={i}>
           <AccountCard

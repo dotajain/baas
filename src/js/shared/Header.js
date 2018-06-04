@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom'
-import { DropdownButton, MenuItem } from 'react-bootstrap';
+import { DropdownButton } from 'react-bootstrap';
 import _ from 'lodash';
 
 import BrandLogo from './BrandLogo';
@@ -13,7 +13,7 @@ const Header = (menuItem) => {
     })
     return (
       <li className="nav-item" key={i}>
-        <DropdownButton bsStyle="link" title={menu.title} id={`menuItem-${i}`} className="nav-link">
+        <DropdownButton bsStyle="link" title={menu.title} id={`menuItem-${i}`} className="nav-link px-2">
           {subMenu}
         </DropdownButton>
       </li>
@@ -27,8 +27,8 @@ const Header = (menuItem) => {
     </nav>
     <nav className="navbar navbar-toggleable-md navbar-primary justify-content-between">  
         <div className="navbar-main">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item"><NavLink exact to="/" className="nav-link" activeClassName="selected">Home</NavLink></li>
+          <ul className="navbar-nav mr-auto flex-row">
+            <li className="nav-item"><NavLink exact to="/" className="nav-link px-2" activeClassName="selected">Home</NavLink></li>
             {menus}
           </ul>
         </div>

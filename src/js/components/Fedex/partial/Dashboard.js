@@ -1,23 +1,24 @@
 import React from "react";
- 
-const Dashboard = ({...props}) =>{
+import _ from 'lodash';
 
-    const listImages = _.map(props.data , (item, i) => {
+const Dashboard = ({...props }) =>{
 
-        return (
-          <div  className="col-sm-4" style={{ border:'solid',borderColor: 'blue'}} key={i}>
-          <img src={item.path} alt="no image" onClick={() => props.onclick(item) }/>   
-          </div>    
-             );
-      });
+  const listImages = _.map(props.data, (item, i) => {
 
-return (
+    return (
+      <div className="col-sm-4" style={{ border: 'solid', borderColor: 'blue' }} key={i}>
+        <img src={item.path} alt="no" onClick={() => props.onclick(item)} />
+      </div>
+    );
+  });
+
+  return (
     <div className="jumbotron">
-       <div className="form-group row">
-                   {listImages}           
-        </div>
+      <div className="form-group row">
+        {listImages}
+      </div>
     </div>
-      )
+  )
 }
 
 export default Dashboard;

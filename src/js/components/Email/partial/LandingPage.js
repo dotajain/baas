@@ -1,8 +1,8 @@
 import React from 'react';
 
-import emailNotification from '../../../../assets/images/email-notification.jpg';
+// import emailNotification from '../../../../assets/images/email-notification.jpg';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { githubGist } from 'react-syntax-highlighter/dist/styles';
+import { githubGist } from 'react-syntax-highlighter/styles/hljs';
 
 const LandingPage = () => (
   <section className="section" id="emailService">

@@ -1,2 +1,2 @@
-export * as urls from './urls';
-export * as actionTypes from './actionTypes';
+export { urls } from './urls';
+export { actionTypes } from './actionTypes';

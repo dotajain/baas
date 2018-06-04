@@ -1,5 +1,5 @@
-import { actionTypes as types, urls } from '../constants';
-import { post, get } from '../helpers';
+import { actionTypes as types } from '../constants';
+import { post } from '../helpers';
 
 export const sendEmail = ({data, serviceUrl}) => (dispatch) => {
   dispatch({ type: types.SEND_EMAIL_REQUEST });

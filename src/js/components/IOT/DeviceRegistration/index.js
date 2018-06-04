@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
-import moment from 'moment';
+// import moment from 'moment';
 import axios from 'axios';
 import ReactHighcharts from 'react-highcharts';
 
 import { connect } from "react-redux";
-import { getTemprature, getAllTemprature } from "../../../redux/actions/iotAction";
+import { getAllTemprature } from "../../../redux/actions/iotAction";
 
 @connect((store) => {
   return {
